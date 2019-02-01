@@ -30,7 +30,7 @@ app.use((req,res,next)=>{
 
 app.set('view engine','hbs');//setting engine hbs
 
-app.use(express.static(__dirname+'/public')); //setting dictory direct access
+app.use(express.static(__dirname+'/public')); //settings dictory direct access
 
 app.get('/',(req,res)=>{
     //res.send('<h1>Welcome Express.........</h1>');
