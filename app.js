@@ -4,6 +4,8 @@ var app = express();
 
 const fs = require('fs');
 
+const port = process.env.PORT || 9000;
+
 hbs.registerPartials(__dirname+'/views/partials'); //registering hbs templs
 
 hbs.registerHelper('useme',()=>{ // this is for global using widgets
@@ -51,4 +53,8 @@ app.get('/about',(req,res)=>{
 app.get('/hi',(req,res)=>{
     res.send('Hi Express.........');
 });
-app.listen(9000);
+
+
+app.listen(port,()=>{
+    console.log(`Running on Port ${port}`);
+});
